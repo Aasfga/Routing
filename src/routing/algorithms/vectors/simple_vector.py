@@ -1,4 +1,4 @@
-from algorithms.vectors import DistanceVector
+from routing.algorithms.vectors import DistanceVector
 
 
 class SimpleVector(DistanceVector):

@@ -1,5 +1,4 @@
-from algorithms.vectors import DistanceVector
-import copy
+from routing.algorithms.vectors import DistanceVector
 
 
 def get_edge(r1, r2):

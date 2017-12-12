@@ -1,5 +1,6 @@
-from algorithms import RoutingAlgorithm
 import random
+
+from routing.algorithms import RoutingAlgorithm
 
 
 class RandomRouter(RoutingAlgorithm):

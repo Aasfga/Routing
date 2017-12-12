@@ -1,4 +1,5 @@
-from router import *
+from routing.router import *
+
 
 class RoutingAlgorithm:
     """Abstract routing algorithm class"""

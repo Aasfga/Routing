@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # vim:ts=4:sts=4:sw=4:expandtab
 
-import json
 import logging
-import random
 import uuid
-from router import *
-from algorithms import RoutingAlgorithm
+
+from routing.router import *
+
+from routing.algorithms import RoutingAlgorithm
+
 
 class Simulator:
     """Simulator sandbox for routing algorithm experiments"""

@@ -1,7 +1,7 @@
-import logging
-from algorithms.routing_algorithm import RoutingAlgorithm
-from algorithms.vectors import GraphVector, SimpleVector, DistanceVector
-from router.packet import MetaPacket
+from routing.algorithms.routing_algorithm import RoutingAlgorithm
+from routing.router import MetaPacket
+
+from routing.algorithms.vectors import GraphVector, DistanceVector
 
 
 class ShortPathRouter(RoutingAlgorithm):
@@ -52,7 +52,7 @@ class ShortPathRouter(RoutingAlgorithm):
                 self.is_changed = self.handle_vector(src, packet.payload) or self.is_changed
             else:
                 self.router.store_packet(packet)
-        if self.time % 5 == 0:  # SEND my distance vector to neighbors every 5-th round
+        if self.is_changed and self.time % 5 == 0:  # SEND my distance vector to neighbors every 5-th round
             # logging.debug('Router {} sending vector {} to neighbors'.format(self.router.id, self.give_vector()))
             self.send_vector()
             self.is_changed = False

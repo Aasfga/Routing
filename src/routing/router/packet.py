@@ -1,6 +1,7 @@
 import json
 import uuid
 
+
 class Packet:
     """Abstract packet class"""
     def __init__(self, src, dst):

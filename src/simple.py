@@ -1,7 +1,7 @@
 import logging
-from algorithms import RandomRouter, ShortPathRouter, GraphVector, SimpleVector
-from router import Link
-from simulator import Simulator
+
+from routing.algorithms import ShortPathRouter, GraphVector
+from routing.simulator import Simulator
 
 logging.basicConfig(level=logging.DEBUG)
 sim = Simulator()
@@ -25,22 +25,13 @@ sim.add_link(r5, r6)
 sim.add_link(r6, r7)
 sim.add_link(r7, r8)
 sim.add_link(r8, r9)
-# sim.add_link(r9, r1)
 
-is_removed = True
-for i in range(10000):
+
+for i in range(2000):
     if i % 3 == 0:
         sim.add_packet(r1, r9)
-    if i % 100 == 0 and is_removed:
-        sim.add_link(r1, r9)
-        is_removed = False
-    elif i % 100 == 0 and not is_removed:
-        sim.del_link(r1, r9)
-        is_removed = True
-    
     sim.route()
 
 for i in range(30):
     sim.route()
-
 print(sim.stats)
