@@ -1,5 +1,7 @@
 # Routing - small network simulator
 
+# Licence
+Simulator files are created by Grzegorz Gutowski and are available under licence WTFPL. RIP algorithm was created by me
 
 Small simulator that uses RIP protocol 
 to share network map between routers.
@@ -33,3 +35,4 @@ for i in range(100):
 #more examples in src folder
 
 ``` 
+
