@@ -1,3 +1,5 @@
+# Created by Grzegorz Gutowski
+
 class Link:
     """Abstract inter-router link class"""
     def __init__(self, dst):
