@@ -1,3 +1,5 @@
+# Created by Grzegorz Gutowski
+
 import random
 
 from routing.algorithms import RoutingAlgorithm
