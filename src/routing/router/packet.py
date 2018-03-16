@@ -1,3 +1,4 @@
+# Created by Grzegorz Gutowski
 import json
 import uuid
 
